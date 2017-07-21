@@ -1,0 +1,9 @@
+.PHONY: all
+all: $(OBJS) build-subdirs
+
+.PHONY: clean
+clean: clean-subdirs
+	@echo CLEAN $(OBJS)
+	@rm -f $(OBJS)
+
+include $(MAKE_INCLUDE)
