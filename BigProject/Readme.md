@@ -1,5 +1,9 @@
 # Makefile for BIG Project
 
+## Language
+
+[English](./Readme.md) | [简体中文](./Readme-cn.md)
+
 ## Introduction
 
 If the Makefile for SMALL or MEDIUM project are not suitable for your project, then maybe we can call it a BIG project.

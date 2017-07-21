@@ -1,5 +1,9 @@
 # Makefile Templates
 
+## Language
+
+[English](./Readme.md) | [简体中文](./Readme-cn.md)
+
 ## Introduction
 
 Here are some **Makefile Templates** for different size of projects, from a simple project which has a 'flat' source file structure, to a bigger project which has a 'complex' structure.

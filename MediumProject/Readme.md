@@ -1,4 +1,8 @@
-# Makefile for SMALL Project
+# Makefile for MEDIUM Project
+
+## Language
+
+[English](./Readme.md) | [简体中文](./Readme-cn.md)
 
 ## Introduction
 
