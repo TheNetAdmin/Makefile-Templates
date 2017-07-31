@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./src/f1.h"
-#include "./src/f2.h"
+#include "f1.h"
+#include "f2.h"
 
 int main() {
     std::cout << f1(1, 2) << std::endl;

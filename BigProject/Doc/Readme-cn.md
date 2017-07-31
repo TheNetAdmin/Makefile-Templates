@@ -2,7 +2,7 @@
 
 ## 语言选项
 
-[English](./Readme.md) | [简体中文](./Readme-cn.md)
+[English](../Readme.md) | [简体中文](./Readme-cn.md)
 
 ## 简介
 

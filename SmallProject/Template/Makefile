@@ -28,7 +28,7 @@ default: all
 
 # non-phony targets
 $(TARGET): $(OBJ)
-	$(CC) $(CCFLAG) -o $(BIN_PATH)/$@ $? $(MAIN_SRC)
+	$(CC) $(CCFLAG) -o $(BIN_PATH)/$@ $?
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
 	$(CC) $(CCOBJFLAG) -o $@ $<

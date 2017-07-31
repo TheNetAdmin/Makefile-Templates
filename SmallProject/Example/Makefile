@@ -10,8 +10,8 @@ SRC_PATH := src
 DBG_PATH := debug
 
 # compile marcros
-TARGET := medium.exe
-MAIN_SRC := main.cpp
+TARGET := small.exe
+MAIN_SRC := src/main.cpp
 
 # src files & obj files
 SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.c*)))
@@ -28,7 +28,7 @@ default: all
 
 # non-phony targets
 $(TARGET): $(OBJ)
-	$(CC) $(CCFLAG) -o $(BIN_PATH)/$@ $? $(MAIN_SRC)
+	$(CC) $(CCFLAG) -o $(BIN_PATH)/$@ $?
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
 	$(CC) $(CCOBJFLAG) -o $@ $<
