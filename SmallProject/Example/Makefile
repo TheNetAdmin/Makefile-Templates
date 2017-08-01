@@ -11,7 +11,7 @@ SRC_PATH := src
 DBG_PATH := debug
 
 # compile marcros
-TARGET_NAME := small
+TARGET_NAME := main
 ifeq ($(OS),Windows_NT)
 	TARGET_NAME := $(addsuffix .exe,$(TARGET_NAME))
 endif
@@ -22,9 +22,11 @@ MAIN_SRC := src/main.cpp
 # src files & obj files
 SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.c*)))
 OBJ := $(addprefix $(OBJ_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
+OBJ_DEBUG := $(addprefix $(DBG_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
 
 # clean files list
-DISTCLEAN_LIST := $(OBJ_PATH)/*
+DISTCLEAN_LIST := $(OBJ) \
+                  $(OBJ_DEBUG)
 CLEAN_LIST := $(TARGET) \
 			  $(TARGET_DEBUG) \
 			  $(DISTCLEAN_LIST)
@@ -39,7 +41,10 @@ $(TARGET): $(OBJ)
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
 	$(CC) $(CCOBJFLAG) -o $@ $<
 
-$(TARGET_DEBUG): $(OBJ)
+$(DBG_PATH)/%.o: $(SRC_PATH)/%.c*
+	$(CC) $(CCOBJFLAG) $(DBGFLAG) -o $@ $<
+
+$(TARGET_DEBUG): $(OBJ_DEBUG)
 	$(CC) $(CCFLAG) $(DBGFLAG) $? -o $@
 
 # phony rules
