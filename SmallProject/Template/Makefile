@@ -1,16 +1,16 @@
-# tool marcros
+# tool macros
 CC := # FILL: the compiler
 CCFLAG := # FILL: compile flags
 DBGFLAG := -g
 CCOBJFLAG := $(CCFLAG) -c
 
-# path marcros
+# path macros
 BIN_PATH := bin
 OBJ_PATH := obj
 SRC_PATH := src
 DBG_PATH := debug
 
-# compile marcros
+# compile macros
 TARGET_NAME := # FILL: target name
 ifeq ($(OS),Windows_NT)
 	TARGET_NAME := $(addsuffix .exe,$(TARGET_NAME))
