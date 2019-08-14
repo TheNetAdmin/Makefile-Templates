@@ -48,7 +48,7 @@ If any of the `OBJ`'s object is out-dated, it will be re-generated and futher, t
     1. BUT, I do NOT recomment you to do this. Consider we have two srcs, *src/sub1/src1.c*, *src/sub2/src1.c*. They would not conflict when we write the code. But remember ALL the objects will be output tot `OBJ_PATH`, when compiling, they will conflict, and the linker will be confused.
     1. So, what if I really need to do so? Consider using the Template **MediumProject** we provided.
 1. Why putting all objects into one dir?
-    1. Since the project is a SMALL project, doing so will reduce the complexity of folder structure, and make it easier to clean these filse.
+    1. Since the project is a SMALL project, doing so will reduce the complexity of folder structure, and make it easier to clean these files.
 1. What should I know when using this template under Windows
     1. You may want to set a global variable `MAKE` which points to the make tool in your system.
     1. The `TARGET` should be end with *.exe*, if not, some make tool will add it for you, which makes the `make clean` not possible to clean this target file.
