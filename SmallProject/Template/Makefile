@@ -61,5 +61,5 @@ clean:
 
 .PHONY: distclean
 distclean:
-	@echo CLEAN $(CLEAN_LIST)
+	@echo CLEAN $(DISTCLEAN_LIST)
 	@rm -f $(DISTCLEAN_LIST)
