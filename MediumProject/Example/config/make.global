@@ -4,7 +4,7 @@ export MAKE := "C:/PROGRA~1/IMAGIN~1/INTERN~1/msys/bin/make.exe"
 # make flag
 MAKEFLAGS := -s --no-print-directory
 
-# compile marcro
+# compile marco
 CC := g++
 
 # compile flags
