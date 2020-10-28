@@ -20,11 +20,11 @@ To use this template, copy the template file in `Template` folder to your projec
 
 Assume we have a project with the following folder structure, we call it a **Small Project**
 
-- Root: holds the **main** src file
+- Root:
   - bin: holds target files
   - obj: holds object files
-  - src: holds **all** src files(except the **main** src file)
-    - some-subdirs: hold **NO** src files related to the general build process. You can add some other rules to the Makefile to use these srcs, but it's not recommended, we will discuss about this point later
+  - src: holds **all** src files
+    - some-subdirs: hold **NO** src files related to the general build process. You can add some other rules to the Makefile to use these srcs, but in that case, you should take a look at **Medium Project** template.
 
 ## Work flow
 
