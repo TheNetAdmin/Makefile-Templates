@@ -6,7 +6,7 @@ MAIN_SRC := # FILL: src file which contains `main()`
 DIRS := src # FILL: only the dirs which contain the src files, in this case, `src` should be added
 OBJS := # FILL: only the objects in current dir, and do not include the one contains `main()`
 
-# intermedia compile marcros
+# intermedia compile marcos
 # NOTE: ALL_OBJS are intentionally left blank, no need to fill it
 ALL_OBJS := 
 CLEAN_FILES := $(TARGET) $(OBJS)
