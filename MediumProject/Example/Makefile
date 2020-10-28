@@ -1,12 +1,12 @@
-# target marcros
+# target marcos
 TARGET := medium.exe
 MAIN_SRC := main.cpp
 
-# compile marcros
+# compile marcos
 DIRS := src1 src2 src3
 OBJS := 
 
-# intermedia compile marcros
+# intermedia compile marcos
 ALL_OBJS := 
 CLEAN_FILES := $(TARGET) $(OBJS)
 DIST_CLEAN_FILES := $(OBJS)
@@ -19,8 +19,8 @@ default: show-info all
 
 # non-phony targets
 $(TARGET): build-subdirs $(OBJS) find-all-objs
-	@echo -e "\t" CC $(CCFLAG) $(ALL_OBJS) $(MAIN_SRC) -o $@
-	@$(CC) $(CCFLAG) $(ALL_OBJS) $(MAIN_SRC) -o $@
+	@echo -e "\t" CC $(CCFLAGS) $(ALL_OBJS) $(MAIN_SRC) -o $@
+	@$(CC) $(CCFLAGS) $(ALL_OBJS) $(MAIN_SRC) -o $@
 
 # phony targets
 .PHONY: all
