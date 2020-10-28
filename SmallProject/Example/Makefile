@@ -1,8 +1,8 @@
 # tool marcos
 CC := g++
-CCFLAG :=
-DBGFLAG := -g
-CCOBJFLAG := $(CCFLAG) -c
+CCFLAGS :=
+DBGFLAGS := -g
+CCOBJFLAGS := $(CCFLAGS) -c
 
 # path marcos
 BIN_PATH := bin
@@ -36,16 +36,16 @@ default: all
 
 # non-phony targets
 $(TARGET): $(OBJ)
-	$(CC) $(CCFLAG) -o $@ $?
+	$(CC) $(CCFLAGS) -o $@ $?
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
-	$(CC) $(CCOBJFLAG) -o $@ $<
+	$(CC) $(CCOBJFLAGS) -o $@ $<
 
 $(DBG_PATH)/%.o: $(SRC_PATH)/%.c*
-	$(CC) $(CCOBJFLAG) $(DBGFLAG) -o $@ $<
+	$(CC) $(CCOBJFLAGS) $(DBGFLAGS) -o $@ $<
 
 $(TARGET_DEBUG): $(OBJ_DEBUG)
-	$(CC) $(CCFLAG) $(DBGFLAG) $? -o $@
+	$(CC) $(CCFLAGS) $(DBGFLAGS) $? -o $@
 
 # phony rules
 .PHONY: all
