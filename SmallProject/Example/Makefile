@@ -1,16 +1,16 @@
-# tool marcos
+# tool macros
 CC := g++
 CCFLAGS :=
 DBGFLAGS := -g
 CCOBJFLAGS := $(CCFLAGS) -c
 
-# path marcos
+# path macros
 BIN_PATH := bin
 OBJ_PATH := obj
 SRC_PATH := src
 DBG_PATH := debug
 
-# compile marcos
+# compile macros
 TARGET_NAME := main
 ifeq ($(OS),Windows_NT)
 	TARGET_NAME := $(addsuffix .exe,$(TARGET_NAME))

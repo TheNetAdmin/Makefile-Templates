@@ -1,12 +1,12 @@
-# target marcos
+# target macros
 TARGET := medium.exe
 MAIN_SRC := main.cpp
 
-# compile marcos
+# compile macros
 DIRS := src1 src2 src3
 OBJS := 
 
-# intermedia compile marcos
+# intermedia compile macros
 ALL_OBJS := 
 CLEAN_FILES := $(TARGET) $(OBJS)
 DIST_CLEAN_FILES := $(OBJS)
