@@ -45,7 +45,7 @@ If any of the `OBJ`'s object is out-dated, it will be re-generated and futher, t
 
 1. Shall I put src files in sub-dirs of `SRC_PATH`?
     1. Basically, YES. You could put some srcs in such sub-dirs, and add some new rules to the Makefile.
-    1. BUT, I do NOT recomment you to do this. Consider we have two srcs, *src/sub1/src1.c*, *src/sub2/src1.c*. They would not conflict when we write the code. But remember ALL the objects will be output tot `OBJ_PATH`, when compiling, they will conflict, and the linker will be confused.
+    1. BUT, I do NOT recommend you to do this. Consider we have two srcs, *src/sub1/src1.c*, *src/sub2/src1.c*. They would not conflict when we write the code. But remember ALL the objects will be output tot `OBJ_PATH`, when compiling, they will conflict, and the linker will be confused.
     1. So, what if I really need to do so? Consider using the Template **MediumProject** we provided.
 1. Why putting all objects into one dir?
     1. Since the project is a SMALL project, doing so will reduce the complexity of folder structure, and make it easier to clean these files.
