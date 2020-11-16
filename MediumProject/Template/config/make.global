@@ -1,11 +1,12 @@
 # make path
-export MAKE := # FILL: make path, may needed under Windows
+# export MAKE := "C:/PROGRA~1/IMAGIN~1/INTERN~1/msys/bin/make.exe"
 
 # make flag
-MAKEFLAGS := -s --no-print-directory
+MAKEFLAGS += --no-print-directory
+MAKEFLAGS += -s
 
 # compile macro
-CC := # FILL: compiler
+CC := g++
 
 # compile flags
 CCFLAGS := 
@@ -17,12 +18,12 @@ build-subdirs: $(DIRS)
 
 .PHONY: $(DIRS)
 $(DIRS):
-	@$(MAKE) $(MAKEFLAGS) -C $@ all
+	@$(MAKE) -C $@ all
 	
 .PHONY: clean-subdirs
 clean-subdirs:
 	@for dir in $(DIRS); do \
-		$(MAKE) $(MAKEFLAGS) -C $$dir clean; \
+		$(MAKE) -C $$dir clean; \
 	done
 
 # dependencies
