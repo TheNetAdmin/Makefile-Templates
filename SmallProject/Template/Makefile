@@ -1,5 +1,5 @@
 # tool macros
-CC := # FILL: the compiler
+CC ?= # FILL: the compiler
 CCFLAGS := # FILL: compile flags
 DBGFLAGS := -g
 CCOBJFLAGS := $(CCFLAGS) -c
