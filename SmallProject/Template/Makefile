@@ -1,8 +1,10 @@
 # tool macros
 CC ?= # FILL: the compiler
-CCFLAGS := # FILL: compile flags
+CXX ?= # FILL: the compiler
+CFLAGS := # FILL: compile flags
+CXXFLAGS := # FILL: compile flags
 DBGFLAGS := -g
-CCOBJFLAGS := $(CCFLAGS) -c
+COBJFLAGS := $(CFLAGS) -c
 
 # path macros
 BIN_PATH := bin
@@ -35,16 +37,16 @@ default: makedir all
 
 # non-phony targets
 $(TARGET): $(OBJ)
-	$(CC) -o $@ $(OBJ) $(CCFLAGS)
+	$(CC) -o $@ $(OBJ) $(CFLAGS)
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
-	$(CC) $(CCOBJFLAGS) -o $@ $<
+	$(CC) $(COBJFLAGS) -o $@ $<
 
 $(DBG_PATH)/%.o: $(SRC_PATH)/%.c*
-	$(CC) $(CCOBJFLAGS) $(DBGFLAGS) -o $@ $<
+	$(CC) $(COBJFLAGS) $(DBGFLAGS) -o $@ $<
 
 $(TARGET_DEBUG): $(OBJ_DEBUG)
-	$(CC) $(CCFLAGS) $(DBGFLAGS) $(OBJ_DEBUG) -o $@
+	$(CC) $(CFLAGS) $(DBGFLAGS) $(OBJ_DEBUG) -o $@
 
 # phony rules
 .PHONY: makedir

@@ -6,11 +6,14 @@ MAKEFLAGS += --no-print-directory
 MAKEFLAGS += -s
 
 # compile macro
-CC := g++
+CC := gcc
+CXX:= g++
 
 # compile flags
-CCFLAGS := 
-OBJCCFLAGS := $(CCFLAGS) -c
+CFLAGS :=
+CXXFLAGS := 
+OBJCFLAGS := $(CFLAGS) -c
+OBJCXXFLAGS := $(CXXFLAGS) -c
 
 # recursive make and clean
 .PHONY: build-subdirs
@@ -27,6 +30,10 @@ clean-subdirs:
 	done
 
 # dependencies
-%.o: %.c*
-	@echo -e "\t" CC $(OBJCCFLAGS) $< -o $@
-	@$(CC) $(OBJCCFLAGS) $< -o $@
+%.o: %.c
+	@echo -e "\t" CC $(OBJCFLAGS) $< -o $@
+	@$(CC) $(OBJCFLAGS) $< -o $@
+
+%.o: %.cpp
+	@echo -e "\t" CXX $(OBJCXXFLAGS) $< -o $@
+	@$(CXX) $(OBJCXXFLAGS) $< -o $@
