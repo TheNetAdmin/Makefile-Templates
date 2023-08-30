@@ -11,6 +11,7 @@ This is the template for **SMALL** Project, which has the features like:
 - Only one source file folder
 - All source files are in the same folder, no sub src dirs
 - Only one target to build
+- added a docker container option `make builder-build` and `make builder-run` to allow developing with a container from VSCode
 
 ## How to
 
