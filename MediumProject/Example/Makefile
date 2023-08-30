@@ -4,10 +4,10 @@ MAIN_SRC := main.cpp
 
 # compile macros
 DIRS := src1 src2 src3
-OBJS := 
+OBJS := main.o
 
 # intermedia compile macros
-ALL_OBJS := 
+ALL_OBJS := $(OBJS)
 CLEAN_FILES := $(TARGET) $(OBJS)
 DIST_CLEAN_FILES := $(OBJS)
 
@@ -19,8 +19,8 @@ default: show-info all
 
 # non-phony targets
 $(TARGET): build-subdirs $(OBJS) find-all-objs
-	@echo -e "\t" CC $(CCFLAGS) $(ALL_OBJS) $(MAIN_SRC) -o $@
-	@$(CC) $(CCFLAGS) $(ALL_OBJS) $(MAIN_SRC) -o $@
+	@echo -e "\t" CXX $(CXXFLAGS) $(ALL_OBJS) -o $@
+	@$(CXX) $(CXXFLAGS) $(ALL_OBJS) -o $@
 
 # phony targets
 .PHONY: all
