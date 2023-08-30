@@ -33,6 +33,20 @@ CLEAN_LIST := $(TARGET) \
 # default rule
 default: makedir all
 
+builder-build :
+	docker build -f builder.Dockerfile -t $(project_name)-builder:latest .
+
+builder-run :
+	docker run \
+		--rm \
+		-it \
+		--platform linux/amd64 \
+		--workdir /builder/mnt \
+		-v ${PWD}:/builder/mnt \
+		$(project_name)-builder:latest \
+		/bin/bash
+
+
 # non-phony targets
 $(TARGET): $(OBJ)
 	$(CC) $(CCFLAGS) -o $@ $(OBJ)
