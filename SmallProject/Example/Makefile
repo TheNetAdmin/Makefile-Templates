@@ -10,6 +10,8 @@ OBJ_PATH := obj
 SRC_PATH := src
 DBG_PATH := debug
 
+project_name := makefile-template
+
 # compile macros
 TARGET_NAME := main
 ifeq ($(OS),Windows_NT)
